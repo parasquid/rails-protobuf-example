@@ -1,0 +1,18 @@
+syntax = "proto3";
+package proto;
+
+message Articles {
+  repeated Article articles = 1;
+}
+
+message Article {
+  string title = 1;
+  string body = 2;
+  repeated Comment comments = 3;
+}
+
+message Comment {
+  string article_id = 1;
+  string commenter = 2;
+  string body = 3;
+}
